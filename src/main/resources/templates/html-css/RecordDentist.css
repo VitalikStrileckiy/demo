@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}main {
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     background: url("/templates/img/RecordDentist Background.jpg") center no-repeat;
+     -webkit-background-size: cover;
+     background-size: cover;
+ }
+.register-form-container{
+    max-width: 4000px;
+    background: rgba(255, 255, 255, 0.51);
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.register-form-container2{
+    max-width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.form-title{
+    color: #000000;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    margin-bottom: 38px;
+    text-align: center;
+}
+.form-title2{
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.button{
+    margin-top: 38px;
+    display: block;
+    background: #035cd7;
+    border-radius: 8px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    padding: 4px 4px;
+    text-decoration: none;
+}
+.button:hover{
+     background-color: #0147a9;
+ }
+
+.about2{
+    display: flex;
+    gap: 43px;
+}
+.gap-week{
+    display: flex;
+    gap: 160px;
+}
+.button-dentist[type="radio"]{
+    justify-content: space-between;
+    display: none;
+}
+.about2_item {
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.label-dentist{
+    position: relative;
+    color: #0020c9;
+    font-family: sans-serif;
+    font-size: 16px;
+    border: 2px solid #0020c9;
+    border-radius: 10px;
+    padding: 10px 40px;
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="radio"]:checked + label{
+    background-color: #0020c9;
+    color: white;
+}
+.container-services{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.button-services[type="radio"]{
+    justify-content: space-between;
+    display: none;
+
+
+}
+.label-services{
+    color: #0020c9;
+    font-size: 18px;
+    border: 2px solid #0020c9;
+    border-radius: 10px;
+    padding: 10px 35px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+.container-time{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.button-time[type="radio"]{
+    justify-content: space-between;
+    display: none;
+}
+.label-time{
+    color: #0020c9;
+    font-size: 18px;
+    border: 2px solid #0020c9;
+    border-radius: 100px;
+    padding: 10px 35px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+.container-data{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.button-data[type="radio"]{
+    justify-content: space-between;
+    display: none;
+}
+.label-data{
+    color: #0020c9;
+    font-size: 18px;
+    border: 2px solid #0020c9;
+    border-radius: 100px;
+    padding: 5px 12px;
+    margin-top: 10px;
+    justify-content: center
+}
+.container-week{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.button-week{
+    background: #035cd7;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px 15px;
+}
+.month{
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 6px;
+    text-align: center;
+}
+img{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+
+}
+
+
+
+.container-data form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 475px;
+}
+
+.container-data form div {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border: solid 2px #035cd7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
