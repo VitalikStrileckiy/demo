@@ -12,6 +12,10 @@ public class MainController {
         model.addAttribute("");
         return "Main";
     }
+    @GetMapping("Login")
+    public String login(Model model){
+        return "../html/Login";
+    }
 
 
 

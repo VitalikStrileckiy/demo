@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="RecordDentist.css">
+  <link rel="stylesheet" href="../../static/css/RecordDentist.css">
   <meta charset="UTF-8">
   <title>Записатися до стоматолога</title>
 </head>
@@ -24,9 +24,9 @@
       <div class="container-data">
 
         <div class="gap-week">
-          <a class="button-week"> < </a>
+          <a class="button-week prev"> < </a>
           <h2 class="month">Квітень</h2>
-          <a class="button-week"> > </a>
+          <a class="button-week next"> > </a>
         </div>
 
         <div class="container-week">
@@ -36,15 +36,10 @@
             <a class="days-week">Ср</a>
             <a class="days-week">Чт</a>
             <a class="days-week">Пт</a>
-            <a class="days-week">Сб</a>
-            <a class="days-week">Нд</a>
           </div>
         </div>
 
-        <form action="">
-
-
-
+        <form action="" class="data">
         </form>
 
 
@@ -140,7 +135,7 @@
         <form action="">
 
 
-          <div class="about2">
+          <div class="container-dentist">
             <div class="about2_item">
               <div class="about2_img">
                 <img src="../img/team1.jpg">
@@ -163,6 +158,30 @@
               <label class="label-dentist" for="dentist3">ДАНИЛО</label>
             </div>
           </div>
+          <div class="container-dentist">
+            <div class="about2_item">
+              <div class="about2_img">
+                <img src="../img/team4.jpg">
+              </div>
+              <input class="button-dentist" type="radio" name="size" id="dentist4">
+              <label class="label-dentist" for="dentist4">МАРІЯ</label>
+            </div>
+            <div class="about2_item">
+              <div class="about2_img">
+                <img src="../img/team5.jpg">
+              </div>
+              <input class="button-dentist" type="radio" name="size" id="dentist5">
+              <label class="label-dentist" for="dentist5">ІРИНА</label>
+            </div>
+            <div class="about2_item">
+              <div class="about2_img">
+                <img src="../img/team6.jpg">
+              </div>
+              <input class="button-dentist" type="radio" name="size" id="dentist6">
+              <label class="label-dentist" for="dentist6">ЮЛІЯ</label>
+            </div>
+          </div>
+
 
 
         </form>

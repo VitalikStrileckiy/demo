@@ -16,11 +16,12 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/", "/Main","/SignUp").permitAll()
-                        .anyRequest().authenticated()
-                )
+//        http
+//                .authorizeHttpRequests((requests) -> requests
+//                        .requestMatchers("/", "/Main","/SignUp","/resources/**").permitAll()
+//                        .anyRequest().authenticated()
+//                )
+        http.authorizeHttpRequests().requestMatchers("/login*", "/", "/Main", "/SignUp", "/resources/**", "/resources/static/**", "/resources/templates/**", "/static/css/Login.css", "/templates/**", "/static/**", "/Login.css" ).permitAll().and()
                 .formLogin((form) -> form
                         .loginPage("/Login")
                         .permitAll()
