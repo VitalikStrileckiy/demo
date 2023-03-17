@@ -2,11 +2,13 @@ const calendarForm = document.querySelector('.container-data form')
 const prevBtn = document.querySelector('.prev')
 const nextBtn = document.querySelector('.next')
 const monthTitle = document.querySelector('.month');
+const dateInput = document.querySelector('.container-data form input')
+const dateOutput = document.querySelector('.output-dates');
 
 let MONTH_INDEX = 0
 
 const renderCalendar = function renderCalendarDays() {
-    calendarForm.innerHTML = null
+    dateOutput.innerHTML = null
     let dates = []
 
     const today = moment().add('month', MONTH_INDEX); // поточна дата
@@ -34,17 +36,23 @@ const renderCalendar = function renderCalendarDays() {
     for (let i = 0; i < numDays; i++) {
             const date = dates[i];
             if(date.day() !== 0 && date.day() !== 6) {
-
                 const isToday = date.isSame(today, 'day');
                 const isCurrentMonth = date.isSame(firstDayOfMonth, 'month');
-                if (firstDayOfMonth.format('M') !== date.format('M')) {
-                    calendarForm.innerHTML += `<div class="not-active">${date.format('D')}</div>`
-                } else {
-                    calendarForm.innerHTML += `<div >${date.format('D')}</div>`
-                }
+                const dateBlock = document.createElement('div');
+                dateBlock.innerHTML = date.format('D')
+                dateBlock.className = firstDayOfMonth.format('M') !== date.format('M') ? 'not-active date' : 'date'
+                dateBlock.dataset.day = date.format('D.M.Y');
+
+                dateBlock.addEventListener('click', event => {
+                    dateInput.value = event.target.dataset.day
+                    if(document.querySelector('.active')) {
+                        document.querySelector('.active').classList.remove('active')
+                    }
+                    dateBlock.classList.remove('active')
+                    event.target.classList.add('active')
+                })
+                dateOutput.appendChild(dateBlock);
             }
-
-
     }
 
 }
@@ -83,3 +91,5 @@ function getUkrainianMonthName(monthName) {
     console.log(months[lowerMonthName])
     monthTitle.innerHTML = months[lowerMonthName] || ''
 }
+
+

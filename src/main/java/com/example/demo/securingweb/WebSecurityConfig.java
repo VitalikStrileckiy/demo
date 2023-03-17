@@ -18,10 +18,12 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 //        http
 //                .authorizeHttpRequests((requests) -> requests
-//                        .requestMatchers("/", "/Main","/SignUp","/resources/**").permitAll()
+//                        .requestMatchers("/", "/Main","/SignUp","/resources/**",  "../../static/Main.css").permitAll()
 //                        .anyRequest().authenticated()
-//                )
-        http.authorizeHttpRequests().requestMatchers("/login*", "/", "/Main", "/SignUp", "/resources/**", "/resources/static/**", "/resources/templates/**", "/static/css/Login.css", "/templates/**", "/static/**", "/Login.css" ).permitAll().and()
+//                );
+        http.authorizeHttpRequests().requestMatchers("/login*", "/", "/Main", "/SignUp", "/resources/**",
+                        "/resources/static/**", "/resources/templates/**", "/static/Login.css", "/templates/**",
+                        "../../static/Main.css", "/Login.css" ).permitAll().and()
                 .formLogin((form) -> form
                         .loginPage("/Login")
                         .permitAll()
