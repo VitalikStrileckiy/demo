@@ -17,4 +17,8 @@ public class Journal {
 
     private Date date;
 
+    private String service;
+
+    private Dentist dentist;
+
 }

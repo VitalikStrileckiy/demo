@@ -21,15 +21,16 @@ public class WebSecurityConfig {
 //                        .requestMatchers("/", "/Main","/SignUp","/resources/**",  "../../static/Main.css").permitAll()
 //                        .anyRequest().authenticated()
 //                );
-        http.authorizeHttpRequests().requestMatchers("/login*", "/", "/Main", "/SignUp", "/resources/**",
-                        "/resources/static/**", "/resources/templates/**", "/static/Login.css", "/templates/**",
-                        "../../static/Main.css", "/Login.css" ).permitAll().and()
-                .formLogin((form) -> form
-                        .loginPage("/Login")
-                        .permitAll()
-                )
-                .logout((logout) -> logout.permitAll());
+//        http.authorizeHttpRequests().requestMatchers("/login*", "/", "/Main", "/SignUp", "/resources/**",
+//                        "/resources/static/**", "/resources/templates/**", "/static/Login.css", "/templates/**",
+//                        "../../static/Main.css", "/Login.css" ).permitAll().and()
+//                .formLogin((form) -> form
+//                        .loginPage("/Login")
+//                        .permitAll()
+//                )
+//                .logout((logout) -> logout.permitAll());
 
+        http.authorizeHttpRequests().anyRequest().permitAll();
         return http.build();
     }
 
