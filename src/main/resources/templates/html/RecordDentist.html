@@ -22,78 +22,76 @@
 
     <form class="record-form" action="#" th:action="@{/saveAppointment}" th:object="${appointmentData}" method="post">
 
-      <div class="register-form-container2 select-day-container">
-        <div class="container-data">
+<!--      <div class="register-form-container2 select-day-container">-->
+<!--        <div class="container-data">-->
 
-          <div class="gap-week">
-            <a class="button-week prev"> < </a>
-            <h2 class="month">Квітень</h2>
-            <a class="button-week next"> > </a>
-          </div>
+<!--          <div class="gap-week">-->
+<!--            <a class="button-week prev"> < </a>-->
+<!--            <h2 class="month">Квітень</h2>-->
+<!--            <a class="button-week next"> > </a>-->
+<!--          </div>-->
 
-          <div class="container-week">
-            <div class="about2">
-              <a class="days-week">Пн</a>
-              <a class="days-week">Вт</a>
-              <a class="days-week">Ср</a>
-              <a class="days-week">Чт</a>
-              <a class="days-week">Пт</a>
-            </div>
+<!--          <div class="container-week">-->
+<!--            <div class="about2">-->
+<!--              <a class="days-week">Пн</a>-->
+<!--              <a class="days-week">Вт</a>-->
+<!--              <a class="days-week">Ср</a>-->
+<!--              <a class="days-week">Чт</a>-->
+<!--              <a class="days-week">Пт</a>-->
+<!--            </div>-->
 
-          </div>
-
-
-          <input type="hidden" name="selected-date" value="" />
-          <div class="output-dates">
-
-          </div>
-
-        </div>
-      </div>
+<!--          </div>-->
 
 
-      <h2 class="form-title2">Виберіть годину</h2>
+<!--          <input type="hidden" name="selected-date" value="" />-->
+<!--          <div class="output-dates">-->
 
-      <div class="register-form-container2 select-time-container">
-        <input type="hidden" name="time" value="">
-        <div class="container-time">
+<!--          </div>-->
 
-          <div class="about2">
-            <div class="button-time form-item"  id="time1">10:00 </div>
-            <div class="button-time form-item"  id="time2">11:00 </div>
-            <div class="button-time form-item"  id="time3">12:00 </div>
-          </div>
+<!--        </div>-->
+<!--      </div>-->
 
-          <div class="about2">
-            <div class="button-time form-item"  id="time4">13:00 </div>
-            <div class="button-time form-item"  id="time5">14:00 </div>
-            <div class="button-time form-item"  id="time6">15:00 </div>
-          </div>
 
-          <div class="about2">
-            <div class="button-time form-item"  id="time7">16:00 </div>
-            <div class="button-time form-item"  id="time8">17:00 </div>
-            <div class="button-time form-item"  id="time9">18:00 </div>
-          </div>
+<!--      <h2 class="form-title2">Виберіть годину</h2>-->
 
-          <div class="about2">
-            <div class="button-time form-item"  id="time10">19:00 </div>
-            <div class="button-time form-item"  id="time11">20:00 </div>
-            <div class="button-time form-item"  id="time13">21:00 </div>
-          </div>
+<!--      <div class="register-form-container2 select-time-container">-->
+<!--        <input type="hidden" name="time" value="">-->
+<!--        <div class="container-time">-->
 
-        </div>
-      </div>
+<!--          <div class="about2">-->
+<!--            <div class="button-time form-item"  id="time1">10:00 </div>-->
+<!--            <div class="button-time form-item"  id="time2">11:00 </div>-->
+<!--            <div class="button-time form-item"  id="time3">12:00 </div>-->
+<!--          </div>-->
+
+<!--          <div class="about2">-->
+<!--            <div class="button-time form-item"  id="time4">13:00 </div>-->
+<!--            <div class="button-time form-item"  id="time5">14:00 </div>-->
+<!--            <div class="button-time form-item"  id="time6">15:00 </div>-->
+<!--          </div>-->
+
+<!--          <div class="about2">-->
+<!--            <div class="button-time form-item"  id="time7">16:00 </div>-->
+<!--            <div class="button-time form-item"  id="time8">17:00 </div>-->
+<!--            <div class="button-time form-item"  id="time9">18:00 </div>-->
+<!--          </div>-->
+
+<!--          <div class="about2">-->
+<!--            <div class="button-time form-item"  id="time10">19:00 </div>-->
+<!--            <div class="button-time form-item"  id="time11">20:00 </div>-->
+<!--            <div class="button-time form-item"  id="time13">21:00 </div>-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--      </div>-->
 
 
       <h2 class="form-title2">Виберіть послугу</h2>
 
 
       <div class="register-form-container2 select-offer-container">
-        <input type="hidden" name="offer", value="">
+        <input type="hidden" name="offer" value="" th:field="*{service}">
         <div class="container-services">
-
-
           <div class="button-services form-item"   id="services1">Цифрова стоматологія CEREC</div>
           <div class="button-services form-item"   id="services2">Лікування зубів</div>
           <div class="button-services form-item"   id="services3">Пародонтологія</div>
@@ -103,27 +101,21 @@
           <div class="button-services form-item"   id="services7">Ортодонтія</div>
           <div class="button-services form-item"   id="services8">Відбілювання</div>
           <div class="button-services form-item"   id="services9">Імплантація</div>
-
-
-
         </div>
       </div>
 
 
       <h2 class="form-title2">Виберіть стоматолога</h2>
 
-
-
       <div class="register-form-container2 select-doctor-container">
-        <input type="hidden" name="doctor" value="">
         <div class="section3" th:each="dentist : ${dentists}">
           <div class="container-dentist">
             <div class="about2_item">
               <div class="about2_img">
                 <img th:src="${dentist.photo}">
               </div>
-              <div class="button-dentist form-item"  id="dentist1" th:text="${dentist.name}">Name</div>
-              <div class=""  id="dentistId" th:text="${dentist.id}">ID</div>
+              <input type="radio" th:field="*{dentistId}" th:value="${dentist.id}">
+              <label class="button-dentist form-item" th:text="${dentist.name}">Name</label>
             </div>
           </div>
         </div>

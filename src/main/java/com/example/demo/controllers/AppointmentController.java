@@ -24,6 +24,8 @@ public class AppointmentController {
     @GetMapping("/appointment")
     public String appointment(Model model) {
         model.addAttribute("dentists", dentistRepo.findAll());
+        model.addAttribute("appointmentData", new AppointmentDto());
+
         return "RecordDentist";
     }
 
@@ -32,7 +34,7 @@ public class AppointmentController {
 
         final Journal journal = new Journal();
         journal.setDate(appointmentData.getDate());
-        journal.setDentist(dentistRepo.findById(appointmentData.getDentistID()).get());
+        journal.setDentist(dentistRepo.findById(appointmentData.getDentistId()).get());
         journal.setService(appointmentData.getService());
         journal.setPatient(appointmentData.getUser());
 
