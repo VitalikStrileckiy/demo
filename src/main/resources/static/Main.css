@@ -239,7 +239,7 @@ h1,h2,h3,h4,h5,h6{
 .main{
     text-align: center;
     padding: 100px 0 100px;
-    background: url("/templates/img/RecordDentist Background.jpg") center no-repeat;
+    background: url("/img/RecordDentist Background.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -269,7 +269,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .section2{
     padding: 60px 0;
-    background: url("/templates/img/RecordDentist Background.jpg") center no-repeat;
+    background: url("/img/RecordDentist Background.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     margin-bottom: 150px ;

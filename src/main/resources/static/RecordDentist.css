@@ -65,8 +65,10 @@ h1,h2,h3,h4,h5,h6{
     text-transform: uppercase;
     text-align: center;
     line-height: 40px;
-    padding: 4px 4px;
+    padding: 5px 275px;
     text-decoration: none;
+    border: none;
+
 }
 .button:hover{
      background-color: #0147a9;
@@ -84,16 +86,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     gap: 140px;
 }
-.button-dentist[type="radio"]{
-    justify-content: space-between;
-    display: none;
-}
-.about2_item {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.label-dentist{
+.button-dentist{
     position: relative;
     color: #0020c9;
     font-family: sans-serif;
@@ -106,7 +99,10 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
 }
-
+.about2_item {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 input[type="radio"]:checked + label{
     background-color: #0020c9;
     color: white;
@@ -115,13 +111,7 @@ input[type="radio"]:checked + label{
     padding-left: 30px;
     padding-right: 30px;
 }
-.button-services[type="radio"]{
-    justify-content: space-between;
-    display: none;
-
-
-}
-.label-services{
+.button-services{
     color: #0020c9;
     font-size: 18px;
     border: 2px solid #0020c9;
@@ -130,17 +120,12 @@ input[type="radio"]:checked + label{
     display: flex;
     margin-top: 10px;
     justify-content: center;
-
 }
 .container-time{
     padding-left: 60px;
     padding-right: 60px;
 }
-.button-time[type="radio"]{
-    justify-content: space-between;
-    display: none;
-}
-.label-time{
+.button-time{
     color: #0020c9;
     font-size: 18px;
     border: 2px solid #0020c9;
@@ -161,15 +146,15 @@ input[type="radio"]:checked + label{
     display: none;
 }
 .container-week{
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 450px;
-
-
-
+    padding: 15px 10px 10px 10px;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: column;
 }
+
 .button-week{
     background: #035cd7;
     border-radius: 10px;
@@ -197,14 +182,16 @@ img{
 .container-data .output-dates {
     display: flex;
     flex-wrap: wrap;
-    width: 350px;
-    justify-content: center;
+    margin: 0 auto;
+    column-gap: 20px;
+    width: 450px;
+    justify-content: space-between;
 
 
 }
 
 .output-dates div {
-    margin: 5px;
+    margin: 5px 10px 10px;
     width: 50px;
     height: 50px;
     border: solid 2px #035cd7;
@@ -225,4 +212,5 @@ img{
 .active {
     background: #035cd7 !important;
     color: #ffffff;
+    opacity: 1 !important;
 }

@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../../static/SignUp.css">
+    <link type="text/css" href="/SignUp.css" th:href="@{/SignUp.css}" rel="stylesheet" />
     <meta charset="UTF-8">
     <title>Реєстрація</title>
 </head>
@@ -39,7 +39,7 @@
         <div class="form-buttons">
             <a class="button">зареєструватися</a>
             <div class="divider">Або якщо ви вже зареєстровані</div>
-            <a href="Login.html" class="button">Увійти в обліковий запис</a>
+            <a href="/Login" class="button">Увійти в обліковий запис</a>
         </div>
     </div>
 </main>

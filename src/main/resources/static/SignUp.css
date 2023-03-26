@@ -22,7 +22,7 @@ main{
     width: 100%;
 
 
-    background: url("/templates/img/RecordDentist Background.jpg") center no-repeat;
+    background: url("/img/RecordDentist Background.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 

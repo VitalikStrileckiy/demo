@@ -14,15 +14,19 @@ public class MainController {
         model.addAttribute("");
         return "Main";
     }
-    @GetMapping("Login")
+    @GetMapping("/Login")
     public String login(Model model){
         return "../html/Login";
     }
 
     @GetMapping("/SignUp")
     public String signUp(Model model){
-
         return "SignUp";
+    }
+
+    @GetMapping("/UserPage")
+    public String userPage(Model model){
+        return "UserPage";
     }
 
 

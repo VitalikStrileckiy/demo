@@ -19,6 +19,9 @@ public class Journal {
 
     private String service;
 
-    private Dentist dentist;
+    public void setDentist(Dentist dentist) {
+    }
+
+//    private Dentist dentist;
 
 }
