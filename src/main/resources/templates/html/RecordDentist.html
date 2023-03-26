@@ -116,49 +116,16 @@
 
       <div class="register-form-container2 select-doctor-container">
         <input type="hidden" name="doctor" value="">
-        <div class="section3">
+        <div class="section3" th:each="dentist : ${dentists}">
           <div class="container-dentist">
             <div class="about2_item">
               <div class="about2_img">
-                <img src="../img/team1.jpg">
+                <img th:src="${dentist.photo}">
               </div>
-              <div class="button-dentist form-item"  id="dentist1">ВІКТОР</div>
-            </div>
-            <div class="about2_item">
-              <div class="about2_img">
-                <img src="../img/team2.jpg">
-              </div>
-              <div class="button-dentist form-item"  id="dentist2">ЛЕСЯ</div>
-            </div>
-            <div class="about2_item">
-              <div class="about2_img">
-                <img src="../img/team3.jpg">
-              </div>
-              <div class="button-dentist form-item"  id="dentist3">ДАНИЛО</div>
+              <div class="button-dentist form-item"  id="dentist1" th:text="${dentist.name}">Name</div>
+              <div class=""  id="dentistId" th:text="${dentist.id}">ID</div>
             </div>
           </div>
-          <div class="container-dentist">
-            <div class="about2_item">
-              <div class="about2_img">
-                <img src="../img/team4.jpg">
-              </div>
-              <div class="button-dentist form-item"  id="dentist4">МАРІЯ</div>
-            </div>
-            <div class="about2_item">
-              <div class="about2_img">
-                <img src="../img/team5.jpg">
-              </div>
-              <div class="button-dentist form-item"  id="dentist5">ІРИНА</div>
-            </div>
-            <div class="about2_item">
-              <div class="about2_img">
-                <img src="../img/team6.jpg">
-              </div>
-              <div class="button-dentist form-item"  id="dentist6">ЮЛІЯ</div>
-            </div>
-          </div>
-
-
         </div>
       </div>
       <input type="submit" class="button" value="Записатися">

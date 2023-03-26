@@ -16,7 +16,7 @@ public class AppointmentDto {
     private String service;
 
     // Стоматолог
-    private Dentist dentist;
+    private long dentistID;
 
     // ID клієнта (пізніше будеш витягати з security
     private Patient user;

@@ -19,9 +19,7 @@ public class Journal {
 
     private String service;
 
-    public void setDentist(Dentist dentist) {
-    }
-
-//    private Dentist dentist;
+    @ManyToOne
+    private Dentist dentist;
 
 }
