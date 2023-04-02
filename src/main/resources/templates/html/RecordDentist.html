@@ -115,7 +115,7 @@
                 <img th:src="${dentist.photo}">
               </div>
 
-              <input class="button-dentist" type="radio" th:field="*{service}" th:value="${dentist.id}"/>
+              <input class="button-dentist" type="radio" th:field="*{dentistId}" th:value="${dentist.id}"/>
               <label class="label-dentist" th:text="${dentist.name}">Name</label>
 
 
