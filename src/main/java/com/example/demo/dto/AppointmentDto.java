@@ -1,19 +1,18 @@
 package com.example.demo.dto;
 
-import com.example.demo.entity.Dentist;
 import com.example.demo.entity.Patient;
 import lombok.Data;
-
-import java.util.Date;
 
 @Data
 public class AppointmentDto {
 
     //Date and time
-    private Date date;
+    private String date;
+
+    private String time;
 
     // Послуга
-    private String service;
+    private long serviceId;
 
     // Стоматолог
     private long dentistId;

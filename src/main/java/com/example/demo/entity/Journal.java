@@ -17,9 +17,12 @@ public class Journal {
 
     private Date date;
 
-    private String service;
+    @ManyToOne
+    @JoinColumn(name = "service_id")
+    private Service service;
 
     @ManyToOne
+    @JoinColumn(name = "dentist_id")
     private Dentist dentist;
 
 }

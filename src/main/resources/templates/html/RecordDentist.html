@@ -21,6 +21,7 @@
     <h2 class="form-title2">Виберіть дату</h2>
 
     <form class="record-form" action="#" th:action="@{/saveAppointment}" th:object="${appointmentData}" method="post">
+<!--      <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />-->
 
       <div class="register-form-container2 select-day-container">
         <div class="container-data">
@@ -43,7 +44,7 @@
           </div>
 
 
-          <input type="hidden" name="selected-date" value="" />
+          <input type="hidden" name="selected-date" value="" th:field="*{date}"/>
           <div class="output-dates">
 
           </div>
@@ -55,31 +56,31 @@
       <h2 class="form-title2">Виберіть годину</h2>
 
       <div class="register-form-container2 select-time-container">
-        <input type="hidden" name="time" value="">
+        <input type="hidden" name="time" value="" th:field="*{time}">
         <div class="container-time">
 
           <div class="about2">
-            <div class="button-time form-item"  id="time1">10:00 </div>
-            <div class="button-time form-item"  id="time2">11:00 </div>
-            <div class="button-time form-item"  id="time3">12:00 </div>
+            <div class="button-time form-item"  id="time1">10:00</div>
+            <div class="button-time form-item"  id="time2">11:00</div>
+            <div class="button-time form-item"  id="time3">12:00</div>
           </div>
 
           <div class="about2">
-            <div class="button-time form-item"  id="time4">13:00 </div>
-            <div class="button-time form-item"  id="time5">14:00 </div>
-            <div class="button-time form-item"  id="time6">15:00 </div>
+            <div class="button-time form-item"  id="time4">13:00</div>
+            <div class="button-time form-item"  id="time5">14:00</div>
+            <div class="button-time form-item"  id="time6">15:00</div>
           </div>
 
           <div class="about2">
-            <div class="button-time form-item"  id="time7">16:00 </div>
-            <div class="button-time form-item"  id="time8">17:00 </div>
-            <div class="button-time form-item"  id="time9">18:00 </div>
+            <div class="button-time form-item"  id="time7">16:00</div>
+            <div class="button-time form-item"  id="time8">17:00</div>
+            <div class="button-time form-item"  id="time9">18:00</div>
           </div>
 
           <div class="about2">
-            <div class="button-time form-item"  id="time10">19:00 </div>
-            <div class="button-time form-item"  id="time11">20:00 </div>
-            <div class="button-time form-item"  id="time13">21:00 </div>
+            <div class="button-time form-item"  id="time10">19:00</div>
+            <div class="button-time form-item"  id="time11">20:00</div>
+            <div class="button-time form-item"  id="time13">21:00</div>
           </div>
 
         </div>
@@ -90,17 +91,9 @@
 
 
       <div class="register-form-container2 select-offer-container">
-        <input type="hidden" name="offer" value="" th:field="*{service}">
-        <div class="container-services">
-          <div class="button-services form-item"   id="services1">Цифрова стоматологія CEREC</div>
-          <div class="button-services form-item"   id="services2">Лікування зубів</div>
-          <div class="button-services form-item"   id="services3">Пародонтологія</div>
-          <div class="button-services form-item"   id="services4">Хірургія</div>
-          <div class="button-services form-item"   id="services5">Протезування</div>
-          <div class="button-services form-item"   id="services6">Дитяча стоматологія</div>
-          <div class="button-services form-item"   id="services7">Ортодонтія</div>
-          <div class="button-services form-item"   id="services8">Відбілювання</div>
-          <div class="button-services form-item"   id="services9">Імплантація</div>
+        <div class="container-services" th:each="service : ${services}">
+          <input class="form-item" type="radio" name="offer" th:field="*{serviceId}" th:value="${service.id}">
+          <label class="button-services" th:text="${service.name}">Name</label>
         </div>
       </div>
 
