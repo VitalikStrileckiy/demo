@@ -8,14 +8,12 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Patient {
-
+public class Service {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
     private String name;
 
-    private String phone;
-
+    private boolean active;
 }
