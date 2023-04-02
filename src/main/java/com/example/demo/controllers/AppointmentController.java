@@ -23,9 +23,8 @@ public class AppointmentController {
 
     @GetMapping("/appointment")
     public String appointment(Model model) {
-        model.addAttribute("dentists", dentistRepo.findAll());
+        model.addAttribute("dentists", dentistRepo.findByActive(true));
         model.addAttribute("appointmentData", new AppointmentDto());
-
         return "RecordDentist";
     }
 
@@ -45,7 +44,7 @@ public class AppointmentController {
 
     @GetMapping("/dentists")
     public String  showDentists(Model model) {
-        model.addAttribute("dentists", dentistRepo.findAll());
+        model.addAttribute("dentists", dentistRepo.findByActive(true));
         return "Dentists";
     }
 

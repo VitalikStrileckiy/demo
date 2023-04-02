@@ -17,4 +17,6 @@ public class Dentist {
 
     private String photo;
 
+    private boolean active;
+
 }
