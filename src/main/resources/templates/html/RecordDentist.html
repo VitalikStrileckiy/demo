@@ -92,8 +92,8 @@
 
       <div class="register-form-container2 select-offer-container">
         <div class="container-services" th:each="service : ${services}">
-          <input class="form-item" type="radio" name="offer" th:field="*{serviceId}" th:value="${service.id}">
-          <label class="button-services" th:text="${service.name}">Name</label>
+          <input class="button-services" type="radio" name="offer" th:field="*{serviceId}" th:value="${service.id}">
+          <label class="label-services" th:text="${service.name}">Name</label>
         </div>
       </div>
 
