@@ -19,6 +19,10 @@
 -- Table structure for table `authorities`
 --
 
+DROP DATABESE IF EXISTS `dentist`;
+CREATE DATABESE `dentist` CHARACTER SET utf8;
+USE `dentist`;
+
 DROP TABLE IF EXISTS `authorities`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
