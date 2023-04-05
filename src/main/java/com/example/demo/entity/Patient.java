@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 
 @Data
@@ -17,5 +19,9 @@ public class Patient {
     private String name;
 
     private String phone;
+
+    @OneToOne
+    @JoinColumn(name = "username", referencedColumnName = "username")
+    private User user;
 
 }

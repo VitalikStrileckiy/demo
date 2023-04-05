@@ -1,7 +1,7 @@
 //package com.example.demo.services;
 //
 //import com.example.demo.entity.User;
-//import com.example.demo.entity.enums.Role;
+//import com.example.demo.entity.Role;
 //import com.example.demo.repo.UserRepository;
 //import lombok.RequiredArgsConstructor;
 //import lombok.extern.slf4j.Slf4j;

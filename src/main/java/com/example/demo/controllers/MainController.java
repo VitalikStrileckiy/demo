@@ -9,7 +9,6 @@ public class MainController {
 
     @GetMapping("/")
     public String main(Model model) {
-        model.addAttribute("");
         return "Main";
     }
 
@@ -18,9 +17,6 @@ public class MainController {
         return "SignUp";
     }
 
-    @GetMapping("/UserPage")
-    public String userPage(Model model){
-        return "UserPage";
-    }
+
 
 }

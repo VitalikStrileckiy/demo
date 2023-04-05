@@ -1,9 +1,11 @@
-package com.example.demo.entity.enums;
+package com.example.demo.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 
 public enum Role implements GrantedAuthority {
-    ROLE_USER, ROLE_ADMIN;
+    ROLE_CLIENT,
+    ROLE_DENTIST,
+    ROLE_ADMIN;
 
     @Override
     public String getAuthority() {

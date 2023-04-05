@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 <head>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,12 +27,14 @@
 <main class="main">
   <div class="register-form-container">
     <h1 class="h1" >Ваші записи до стоматолога </h1>
-    <div class="about">
-      <a class="button" href="/appointment" >+</a>
-      <a class="button" href="/appointment" >+</a>
+
+    <div class="section3" th:each="record : ${patientRecords}">
+      <img th:src="${record.dentist.photo}">
+      <label class="label-dentist" th:text="${record.dentist.name}">Name</label>
+      <label class="label-dentist" th:text="${record.service.name}">Service</label>
+      <label class="label-dentist" th:text="${record.date}">Date</label>
     </div>
     <div class="about">
-      <a class="button" href="/appointment" >+</a>
       <a class="button" href="/appointment" >+</a>
     </div>
   </div>
