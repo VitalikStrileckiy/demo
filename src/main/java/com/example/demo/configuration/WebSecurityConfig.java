@@ -50,10 +50,11 @@ public class WebSecurityConfig {
 //                .defaultSuccessUrl("/", true)
                 .and()
                 .logout()
+                .clearAuthentication(true)
                 .logoutSuccessUrl("/")
                 .deleteCookies("JSESSIONID")
                 .invalidateHttpSession(true)
-;
+        ;
         return http.build();
     }
 
