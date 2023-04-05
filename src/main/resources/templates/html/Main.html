@@ -15,14 +15,19 @@
     <div class="container">
         <div class="header_inner">
             <div class="logo"><a href="/" class="logo-img">
-                <img class="img" src="../img/logotype.jpg" width="60" height="60"></a></div>
+                <img class="img" src="/img/logotype.jpg" width="60" height="60"></a></div>
             <nav class="nav">
                 <a class="nav_link" href="#block-1">Послуги</a>
                 <a class="nav_link" href="#block-3">Команда</a>
                 <a class="nav_link" href="#block-4">Локація</a>
                 <a class="nav_link" href="#block-2">Досвід</a>
                 <a class="nav_link" href="#block-5">Контакти</a>
-                <a class="nav_link" href=/Login>Вхід</a>
+                <div sec:authorize="isAuthenticated()">
+                    <a class="nav_link" href=/logout>Вихід</a>
+                </div>
+                <div sec:authorize="!isAuthenticated()">
+                    <a class="nav_link" href=/login.html>Вхід</a>
+                </div>
             </nav>
         </div>
     </div>
@@ -35,6 +40,12 @@
             <h1 class="intro_title"> СТОМАТОЛОГІЧНА КЛІНІКА </h1>
             <h2 class="intro_title_2">лікування зубів, брекети, відновлення та чистка в Івано-франківськ</h2>
             <a class="btn" href="appointment">Записатися на прийом</a>
+            <div sec:authorize="isAuthenticated()">
+                Authenticated username:
+                <div sec:authentication="name"></div>
+                Authenticated user roles:
+                <div sec:authentication="principal.authorities"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -54,7 +65,7 @@
         <div class="about">
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/9.jpg">
+                    <img class="img2" src="/img/9.jpg">
                 </div>
                 <div class="about_text">Відбілювання</div>
                 <div class="about_text2">
@@ -63,7 +74,7 @@
             </div>
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/3.jpg">
+                    <img class="img2" src="/img/3.jpg">
                 </div>
                 <div class="about_text">Лікування зубів</div>
                 <div class="about_text2">
@@ -75,7 +86,7 @@
             </div>
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/4.jpg">
+                    <img class="img2" src="/img/4.jpg">
                 </div>
                 <div class="about_text">Пародонтологія</div>
                 <div class="about_text2">
@@ -90,7 +101,7 @@
         <div class="about">
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/5.jpg">
+                    <img class="img2" src="/img/5.jpg">
                 </div>
                 <div class="about_text">Протезування</div>
                 <div class="about_text2">
@@ -99,7 +110,7 @@
             </div>
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/6.jpg">
+                    <img class="img2" src="/img/6.jpg">
                 </div>
                 <div class="about_text">Імплантація</div>
                 <div class="about_text2">
@@ -109,7 +120,7 @@
             </div>
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/7.jpg">
+                    <img class="img2" src="/img/7.jpg">
                 </div>
                 <div class="about_text">Ортодонтія</div>
                 <div class="about_text2">
@@ -123,7 +134,7 @@
         <div class="about">
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/8.jpg">
+                    <img class="img2" src="/img/8.jpg">
                 </div>
                 <div class="about_text">Хірургія</div>
                 <div class="about_text2">
@@ -134,7 +145,7 @@
             </div>
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/2.jpg">
+                    <img class="img2" src="/img/2.jpg">
                 </div>
                 <div class="about_text">Цифрова стоматологія CEREC</div>
                 <div class="about_text2">У мережі клінік "Український
@@ -145,7 +156,7 @@
             </div>
             <div class="about_item">
                 <div class="about_img">
-                    <img class="img2" src="../img/10.jpg">
+                    <img class="img2" src="/img/10.jpg">
                 </div>
                 <div class="about_text">Дитяча стоматологія</div>
                 <div class="about_text2">
@@ -171,7 +182,7 @@
         <div class="about">
             <div class="experience_item">
                 <div class="experience_img">
-                    <img class="img1" src="../img/experience1.jpg">
+                    <img class="img1" src="/img/experience1.jpg">
                 </div>
                 <div class="experience_text">Сучасно</div>
                 <div class="experience_text2">Застосування у роботі технологій –
@@ -179,7 +190,7 @@
             </div>
             <div class="experience_item">
                 <div class="experience_img">
-                    <img class="img1" src="../img/experience2.jpg">
+                    <img class="img1" src="/img/experience2.jpg">
                 </div>
                 <div class="experience_text">Комфортно</div>
                 <div class="experience_text2">Забезпечення високоякісного сервісу
@@ -187,7 +198,7 @@
             </div>
             <div class="experience_item">
                 <div class="experience_img">
-                    <img class="img1" src="../img/experience3.jpg">
+                    <img class="img1" src="/img/experience3.jpg">
                 </div>
                 <div class="experience_text">3000+</div>
                 <div class="experience_text2">Здорових посмішок і вдячних пацієнтів
@@ -195,7 +206,7 @@
             </div>
             <div class="experience_item">
                 <div class="experience_img">
-                    <img class="img1" src="../img/experience4.jpg">
+                    <img class="img1" src="/img/experience4.jpg">
                 </div>
                 <div class="experience_text">25+</div>
                 <div class="experience_text2">Років досвіду
@@ -221,19 +232,19 @@
         <div class="about2">
             <div class="about2_item">
                 <div class="about2_img">
-                    <img class="img" src="../img/team1.jpg">
+                    <img class="img" src="/img/team1.jpg">
                 </div>
                 <div class="about2_text">ВІКТОР</div>
             </div>
             <div class="about2_item">
                 <div class="about2_img">
-                    <img class="img" src="../img/team2.jpg">
+                    <img class="img" src="/img/team2.jpg">
                 </div>
                 <div class="about2_text">ЛЕСЯ</div>
             </div>
             <div class="about2_item">
                 <div class="about2_img">
-                    <img class="img" src="../img/team3.jpg">
+                    <img class="img" src="/img/team3.jpg">
                 </div>
                 <div class="about2_text">ДАНИЛО</div>
             </div>
@@ -242,19 +253,19 @@
 <!--        <div class="about2">-->
 <!--            <div class="about2_item">-->
 <!--                <div class="about2_img">-->
-<!--                    <img class="img" src="../img/team4.jpg">-->
+<!--                    <img class="img" src="/img/team4.jpg">-->
 <!--                </div>-->
 <!--                <div class="about2_text">МАРІЯ</div>-->
 <!--            </div>-->
 <!--            <div class="about2_item">-->
 <!--                <div class="about2_img">-->
-<!--                    <img class="img" src="../img/team5.jpg">-->
+<!--                    <img class="img" src="/img/team5.jpg">-->
 <!--                </div>-->
 <!--                <div class="about2_text">ІРИНА</div>-->
 <!--            </div>-->
 <!--            <div class="about2_item">-->
 <!--                <div class="about2_img">-->
-<!--                    <img class="img" src="../img/team6.jpg">-->
+<!--                    <img class="img" src="/img/team6.jpg">-->
 <!--                </div>-->
 <!--                <div class="about2_text">ЮЛІЯ</div>-->
 <!--            </div>-->

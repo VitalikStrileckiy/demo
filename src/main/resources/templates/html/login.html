@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html>
 <head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link type="text/css" href="/Login.css" th:href="@{/Login.css}" rel="stylesheet" />
+    <link type="text/css" href="/Login.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <title>Вхід</title>
 </head>
@@ -16,19 +16,19 @@
 <main>
     <div class="register-form-container">
         <h1 class="form-title">Увійти в обліковий запис</h1>
-        <form th:action="@{/login}" method="post">
+        <form action="/login" method="post">
         <div class="form-fields">
             <div class="form-field">
                 <input type="text" placeholder="Email" name="username">
             </div>
             <div class="form-field">
-                <label> Пароль <input type="password" placeholder="Пароль" name="password"/> </label>
+                <label>Пароль<input type="password" placeholder="Пароль" name="password"/> </label>
             </div>
         </div>
         <div class="form-buttons">
-            <a href="UserPage.html " class="button">Увійти</a>
+            <input class="button" name="submit" type="submit" value="submit" />
             <div class="divider">Або</div>
-            <a  href="/SignUp" class="button" > Створити обліковий запис</a>
+            <a href="/SignUp" class="button">Створити обліковий запис</a>
         </div>
         </form>
     </div>
