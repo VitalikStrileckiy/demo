@@ -1,6 +1,22 @@
-DROP DATABESE IF EXISTS `dentist`;
-CREATE DATABESE `dentist` CHARACTER SET utf8;
+DROP DATABASE IF EXISTS `dentist`;
+CREATE DATABASE `dentist` CHARACTER SET utf8;
 USE `dentist`;
+
+
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+                       `username` varchar(50) NOT NULL,
+                       `password` varchar(100) NOT NULL,
+                       `enabled` tinyint NOT NULL DEFAULT '1',
+                       PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 
 --
 -- Table structure for table `authorities`
@@ -28,6 +44,41 @@ CREATE TABLE `dentist` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+
+
+
+
+--
+-- Table structure for table `patient`
+--
+
+DROP TABLE IF EXISTS `patient`;
+CREATE TABLE `patient` (
+                         `id` bigint NOT NULL,
+                         `name` varchar(255) DEFAULT NULL,
+                         `phone` varchar(255) DEFAULT NULL,
+                         `username` varchar(50) NOT NULL,
+                         PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+--
+-- Table structure for table `service`
+--
+
+DROP TABLE IF EXISTS `service`;
+CREATE TABLE `service` (
+                         `id` bigint NOT NULL,
+                         `active` bit(1) NOT NULL,
+                         `name` varchar(255) DEFAULT NULL,
+                         PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
 --
 -- Table structure for table `journal`
 --
@@ -49,41 +100,3 @@ CREATE TABLE `journal` (
   CONSTRAINT `patient` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
---
--- Table structure for table `patient`
---
-
-DROP TABLE IF EXISTS `patient`;
-CREATE TABLE `patient` (
-  `id` bigint NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `phone` varchar(255) DEFAULT NULL,
-  `username` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
---
--- Table structure for table `service`
---
-
-DROP TABLE IF EXISTS `service`;
-CREATE TABLE `service` (
-  `id` bigint NOT NULL,
-  `active` bit(1) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
-  `username` varchar(50) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `enabled` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;

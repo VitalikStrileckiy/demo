@@ -53,29 +53,80 @@ h1,h2,h3,h4,h5,h6{
     justify-content: center;
     align-items: center;
 
-    background: url("/templates/img/RecordDentist Background.jpg") center no-repeat;
+    background: url("/img/RecordDentist Background.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 }
 .register-form-container {
-    max-width: 4150px;
-    background: rgba(255, 255, 255, 0.6);
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 38px;
-    padding-bottom: 38px;
+    padding: 30px;
 }
 .register-form-container2 {
-    max-width: 4150px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 38px;
-    padding-bottom: 38px;
-}
-.q{
-    color: #0020c9;
-}
 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 30px
+}
+h1{
+    text-align: center;
+    margin-bottom: 15px;
+}
+h2{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 60px;
+}
+.container-inormation{
+    display: flex;
+    justify-content: space-between;
+
+
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    margin-top: 15px;
+    margin-right: 25px;
+}
+.container-h2{
+    display: flex;
+}
+.inormation{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 15px;
+
+}
+.button-inormation{
+
+    padding: 10px 15px;
+
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition: background .2s linear,
+    color 1s linear ;
+}
+.button-inormation:hover{
+    background-color: rgb(178, 178, 178);
+}
+.box{
+    height: 500px;
+    overflow-y: auto;
+
+}

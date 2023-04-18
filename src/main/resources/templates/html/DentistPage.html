@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 <head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../../static/DentistPage.css">
+    <link type="text/css" href="/DentistPage.css" th:href="@{/DentistPage.css}" rel="stylesheet">
     <meta charset="UTF-8">
     <title></title>
 </head>
@@ -15,7 +15,7 @@
 <header class="header">
     <div class="container">
         <div class="header_inner">
-            <div class="logo"><a href="Main.html" class="logo-img">
+            <div class="logo"><a href="/" class="logo-img">
                 <img class="img" src="../img/logotype.jpg" width="60" height="60"></a></div>
             <nav class="nav">
                 <a class="nav_link" href="Main.html">Вийти</a>
@@ -28,10 +28,98 @@
 
 <main class="main">
     <div class="register-form-container">
+        <h1 >Ваші пацієнти</h1>
         <div class="register-form-container2">
+            <div class="container-h2">
+                <h2 >Ім’я</h2>
+                <h2 >Телефон</h2>
+                <h2 >Дату і час</h2>
+                <h2 >Послугу</h2>
+            </div>
+            <div class="box">
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+                <div class="container-inormation">
+                    <div class="inormation" >Пантелеймон</div>
+                    <div class="inormation" >+38(097)777-77-77 </div>
+                    <div class="inormation" >2023-05-04 10:00:00.0</div>
+                    <div class="inormation" >Цифрова стоматологія CEREC</div>
+                    <button class="button-inormation">Видалити </button>
+                </div>
+            </div>
 
         </div>
     </div>
+
+    
 </main>
 
 

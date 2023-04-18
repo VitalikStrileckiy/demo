@@ -12,5 +12,4 @@ public interface JournalRepository extends CrudRepository<Journal, Long> {
 
     @Query("SELECT j FROM Journal j WHERE j.patient.id = ?1 and date >= now()")
     List<Journal> findPatientRecords(long patientId);
-
 }

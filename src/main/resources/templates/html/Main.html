@@ -24,12 +24,6 @@
                 <a class="nav_link" href="#block-5">Контакти</a>
                 <a sec:authorize="isAuthenticated()" class="nav_link" href=/logout>Вихід</a>
                 <a sec:authorize="!isAuthenticated()" class="nav_link" href=/login.html>Вхід</a>
-                <div sec:authorize="isAuthenticated()">
-                    <a href="javascript: document.logoutForm.submit()" class="dropdown-toggle">Sign out</a>
-                    <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
-                        <input hidden type="submit" value="Sign Out" />
-                    </form>
-                </div>
             </nav>
         </div>
     </div>

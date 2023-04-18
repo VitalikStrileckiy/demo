@@ -12,13 +12,16 @@ h1,h2,h3,h4,h5,h6{
 }
 .container {
     width: 100%;
-    max-width: 1260px;
-    margin: 0 auto;
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
 .header{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 20px;
     top: 0;
     left: 0;
     right: 0;
@@ -47,32 +50,31 @@ h1,h2,h3,h4,h5,h6{
     color: #7c7c7c;
 }
 .main{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     background: url("/img/RecordDentist Background.jpg") center no-repeat;
+
     -webkit-background-size: cover;
     background-size: cover;
 }
 .register-form-container {
-    max-width: 4150px;
-    background: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 38px;
-    padding-bottom: 38px;
+    padding: 30px
 }
 .about{
     display: flex;
     justify-content: space-between;
+    margin-right: 25px;
 }
 .button{
     width: 100%;
-    margin: 20px 20px;
+
     color: #6c6c6c;
     text-align: center;
     font-size: 100px;
@@ -82,21 +84,93 @@ h1,h2,h3,h4,h5,h6{
     border: 2px solid #6c6c6c;
 
     border-radius: 10px;
-    padding: 60px 250px;
+    padding: 50px ;
 
     transition: background .6s linear,
     color .6s linear ;
 }
 .button:hover {
-    background-color: rgb(150, 150, 150);
+    background-color: rgba(255, 255, 255, 0.85);
     color: #000000;
     border: 2px solid #000000;
 }
 .h1{
     text-align: center;
+    margin-bottom: 30px;
 }
+.img-dentist{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 120px;
+
+}
+.container-inormation{
+    display: block;
+    height: 120px;
+    width: 450px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
 
 
+}
+.container-dentist{
+    display: flex;
+    justify-content: space-between;
+
+}
+.inormation{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+.button-inormation{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+    margin-top: 10px;
+
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition: background .2s linear,
+    color 1s linear ;
+}
+.button-inormation:hover{
+    background-color: rgb(178, 178, 178);
+}
+.section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 25px;
+}
+.container-button-inormation{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    height: 807px;
+    overflow-y: auto;
+
+}
 
 
 
