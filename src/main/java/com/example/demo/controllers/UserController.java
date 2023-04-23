@@ -11,14 +11,17 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.security.Principal;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor
 public class UserController {
+//    private final UserPage userPage;
 
     @Autowired
     JournalRepository journalRepo;
@@ -48,5 +51,14 @@ public class UserController {
         model.addAttribute("patientRecords", patientRecords);
 
         return "UserPage";
+    }
+
+    @GetMapping("/UserPage/delete/{id}")
+    public String deleteDentist(@PathVariable String id){
+        Optional<Journal> byId = journalRepo.findById(Long.valueOf(id));
+        if(byId.isPresent()){
+            journalRepo.delete(byId.get());
+        }
+        return "redirect:/UserPage";
     }
 }

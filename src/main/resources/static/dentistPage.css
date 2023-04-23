@@ -130,3 +130,16 @@ h2{
     overflow-y: auto;
 
 }
+.container-data{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.gap-week{
+    display: flex;
+    gap: 140px;
+}
+.about2{
+    display: flex;
+    justify-content: space-between;
+}

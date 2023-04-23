@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <link type="text/css" href="/UserPage.css" th:href="@{/UserPage.css}" rel="stylesheet"/>
+  <link type="text/css" href="/userPage.css" th:href="@{userPage.css}" rel="stylesheet"/>
   <meta charset="UTF-8">
   <title></title>
 </head>
@@ -43,7 +43,7 @@
         </div>
         <div class="container-button-inormation">
           <button class="button-inormation">Редагувати запис</button>
-          <button class="button-inormation">Видалити </button>
+          <a class="button-inormation" th:href="@{UserPage/delete/{id}(id=${record.id})}">Видалити </a>
         </div>
       </div>
     </div>
