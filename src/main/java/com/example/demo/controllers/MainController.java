@@ -16,12 +16,4 @@ public class MainController {
     public String signUp(Model model){
         return "SignUp";
     }
-
-    @GetMapping("/DentistPage")
-    public String DentistPage(Model model){
-        return "DentistPage";
-    }
-
-
-
 }

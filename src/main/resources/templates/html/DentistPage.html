@@ -36,84 +36,14 @@
                 <h2 >Дату і час</h2>
                 <h2 >Послугу</h2>
             </div>
-            <div class="box" th:each="record : ${patientRecords}">
-                <div class="container-inormation">
-                    <div class="inormation" th:text="${record.dentist.name}">Name</div>
-                    <div class="inormation" >+38(097)777-77-77 </div>
+            <div class="box">
+                <div class="container-inormation" th:each="record : ${patientRecords}">
+                    <div class="inormation" th:text="${record.patient.name}">Name</div>
+                    <div class="inormation" th:text="${record.patient.phone}">phone</div>
                     <div class="inormation" th:text="${record.date}">Date</div>
                     <div class="inormation" th:text="${record.service.name}">Service</div>
-                    <button class="button-inormation">Видалити </button>
+                    <button class="button-inormation" th:href="@{DentistPage.html/delete/{id}(id=${record.id})}">Видалити </button>
                 </div>
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
-<!--                <div class="container-inormation">-->
-<!--                    <div class="inormation" >Пантелеймон</div>-->
-<!--                    <div class="inormation" >+38(097)777-77-77 </div>-->
-<!--                    <div class="inormation" >2023-05-04 10:00:00.0</div>-->
-<!--                    <div class="inormation" >Цифрова стоматологія CEREC</div>-->
-<!--                    <button class="button-inormation">Видалити </button>-->
-<!--                </div>-->
             </div>
 
         </div>
@@ -148,6 +78,7 @@
 <!--        </div>-->
 <!--    </div>-->
 
+</main>
 
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>-->
 <!--    <script>-->
@@ -260,11 +191,6 @@
 
 
 <!--    </script>-->
-
-    
-</main>
-
-
 
 
 </body>
