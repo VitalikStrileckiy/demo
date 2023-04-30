@@ -33,6 +33,7 @@ CREATE TABLE `dentist` (
   `name` varchar(255) DEFAULT NULL,
   `photo` varchar(255) DEFAULT NULL,
   `active` bit(1) NOT NULL,
+  `username` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 

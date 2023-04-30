@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 <head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +16,13 @@
 <main>
     <div class="register-form-container">
         <h1 class="form-title">Увійти в обліковий запис</h1>
-        <form action="/login" method="post">
+        <form th:action="@{/login}" method="post">
         <div class="form-fields">
             <div class="form-field">
                 <input type="text" placeholder="Email" name="username">
             </div>
             <div class="form-field">
-                <label>Пароль<input type="password" placeholder="Пароль" name="password"/> </label>
+                <label>Пароль</label><input type="password" placeholder="Пароль" name="password"/>
             </div>
         </div>
         <div class="form-buttons">
@@ -30,6 +30,9 @@
             <div class="divider">Або</div>
             <a href="/SignUp" class="button">Створити обліковий запис</a>
         </div>
+            <input type="hidden"
+                   name="${_csrf.parameterName}"
+                   value="${_csrf.token}"/>
         </form>
     </div>
 </main>

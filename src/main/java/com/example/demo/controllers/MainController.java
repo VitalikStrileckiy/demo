@@ -12,6 +12,11 @@ public class MainController {
         return "Main";
     }
 
+    @GetMapping("/login")
+    String login() {
+        return "login";
+    }
+
     @GetMapping("/SignUp")
     public String signUp(Model model){
         return "SignUp";
