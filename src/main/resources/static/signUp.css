@@ -2,15 +2,13 @@ body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-input{
-    height: 45px;
-    width: 384px;
-    color: #000000;
-    font-size: 14px;
-    line-height: 16px;
-    border: 2px solid #ffffff;
+.input{
+
+    height: 40px;
+    width: 350px;
     border-radius: 10px;
     padding-left: 25px;
+    border: none;
 }
 main{
     background: #FFFFFF;
@@ -52,14 +50,13 @@ main{
 }
 .button{
     display: block;
-    height: 40px;
     background: #035cd7;
-    border-radius: 8px;
+    border-radius: 10px;
     color: #FFFFFF;
-    text-transform: uppercase;
     text-align: center;
-    line-height: 40px;
-    padding: 4px 4px;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 400;
 }
 a.button{
     text-decoration: none;

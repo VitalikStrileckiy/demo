@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6"><head>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +11,8 @@
 </head>
 <body>
 
+<h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+
 <header class="header">
   <div class="container">
     <div class="header_inner">
@@ -19,6 +20,9 @@
         <img class="img" src="../img/logotype.jpg" width="60" height="60"></a></div>
       <nav class="nav">
         <a class="nav_link" href="/">Вийти</a>
+        <form action="/logout" method="post">
+          <button type="submit">Вийти</button>
+        </form>
       </nav>
     </div>
   </div>
