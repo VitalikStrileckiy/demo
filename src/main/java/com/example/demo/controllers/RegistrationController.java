@@ -38,20 +38,20 @@ public class RegistrationController {
         User user = new User();
         user.setName(userDto.getEmail());
         user.setPassword(passEncoder.encode(userDto.getPassword()));
-//        user.setRoles(Arrays.asList("ROLE_USER"));
         user.setActive(true);
+        user = userRepo.save(user);
+
         Patient patient = new Patient();
         patient.setName(userDto.getFirstName());
         patient.setPhone(userDto.getPhone());
         patient.setUser(user);
+        patientRepo.save(patient);
+
         Authority authority = new Authority();
         authority.setUsername(userDto.getEmail());
         authority.setAuthority("ROLE_CLIENT");
-
-        userRepo.save(user);
-        patientRepo.save(patient);
         authorityRepo.save(authority);
 
-        return "/";
+        return "/Main";
     }
 }
