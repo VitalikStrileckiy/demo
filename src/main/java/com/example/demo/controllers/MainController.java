@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.dto.UserDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,12 +17,6 @@ public class MainController {
     String login() {
         return "login";
     }
-
-    @GetMapping("/SignUp")
-    public String signUp(Model model){
-        return "SignUp";
-    }
-
     @GetMapping("/dentist")
     public String dentist(Model model){
         return "dentist";

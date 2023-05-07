@@ -77,25 +77,4 @@ public class UserController {
         }
         return "/RecordDentist";
     }
-
-    @PostMapping("/SignUp")
-    public String SignUp(UserDto userDto){
-
-
-        User user = new User();
-        user.setName(userDto.getEmail());
-        user.setPassword(passEncoder.encode(userDto.getPassword()));
-//        user.setRoles(Arrays.asList("ROLE_USER"));
-        user.setActive(true);
-
-        userRepo.save(user);
-
-
-
-
-
-return "";
-
-    }
-
 }
