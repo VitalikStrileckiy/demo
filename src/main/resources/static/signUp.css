@@ -64,6 +64,23 @@ a.button{
 .button:hover{
     background-color: #0147a9;
 }
+.button-input{
+    height: 40px;
+    width: 375px;
+    border-radius: 10px;
+    padding-left: 25px;
+    border: none;
+    background: #035cd7;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+}
+a.button-input{
+    text-decoration: none;
+}
+.button-input:hover{
+    background-color: #0147a9;
+}
 .divider{
     font-weight: 500;
     font-size: 15px;

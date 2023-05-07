@@ -23,6 +23,10 @@
                 <a class="nav_link" href="#block-4">Локація</a>
                 <a class="nav_link" href="#block-2">Досвід</a>
                 <a class="nav_link" href="#block-5">Контакти</a>
+                <div class="" sec:authorize="hasRole('ROLE_CLIENT')">
+                    <a class="nav_link" href="UserPage">Мої записи</a>
+                </div>
+<!--                <a sec:authorize="isAuthenticated()" class="nav_link" href=/UserPage>Мої записи</a>-->
                 <a sec:authorize="isAuthenticated()" class="nav_link" href=/logout>Вихід</a>
                 <a sec:authorize="!isAuthenticated()" class="nav_link" href=/login>Вхід</a>
             </nav>
@@ -36,12 +40,11 @@
         <div class="intro_inner">
             <h1 class="intro_title"> СТОМАТОЛОГІЧНА КЛІНІКА </h1>
             <h2 class="intro_title_2">лікування зубів, брекети, відновлення та чистка в Івано-франківськ</h2>
-            <a class="btn" href="appointment">Записатися на прийом</a>
-            <div sec:authorize="isAuthenticated()">
-                Authenticated username:
-                <div sec:authentication="name"></div>
-                Authenticated user roles:
-                <div sec:authentication="principal.authorities"></div>
+            <div sec:authorize="!hasRole('ROLE_DENTIST')">
+                <a class="btn" href="appointment">Записатися на прийом</a>
+            </div>
+            <div sec:authorize="hasRole('ROLE_DENTIST')">
+                <a class="btn" href="DentistPage">Записи на прийом</a>
             </div>
         </div>
     </div>
@@ -68,7 +71,7 @@
                 <div class="about_text2">
                     Відбілювання зубів Beyond. Сяюча посмішка без наслідків
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
             <div class="about_item">
                 <div class="about_img">
@@ -81,7 +84,7 @@
                     лікування зубів проводиться з використанням
                     найсучасніших технологій
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
             <div class="about_item">
                 <div class="about_img">
@@ -94,7 +97,7 @@
                     утримують зуб не
                     своєму місці
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
         </div>
 
@@ -107,7 +110,7 @@
                 <div class="about_text2">
                     Протезування зубів є комплексом методик
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
             <div class="about_item">
                 <div class="about_img">
@@ -118,7 +121,7 @@
                     Пропонуємо своїм пацієнтам новітню методику, під назвою
                     дентальная імплантація зубів.
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
             <div class="about_item">
                 <div class="about_img">
@@ -130,7 +133,7 @@
                     брекети і супутні ортодонтическиематеріали
                     провідних виробників
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
         </div>
 
@@ -145,7 +148,7 @@
                     стоматологічній клініці відділення хірургії,
                     в якому проводиться імплантація та видалення зубів
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
             <div class="about_item">
                 <div class="about_img">
@@ -157,7 +160,7 @@
                     лікування зубів проводиться з використанням
                     найсучасніших технологій
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
             <div class="about_item">
                 <div class="about_img">
@@ -168,7 +171,7 @@
                     “Український Стоматологічний Центр” пропонує повний спектр послуг
                     дитячої стоматології
                 </div>
-                <div class="about_text3">Дитальніше</div>
+                <div class="about_text3">Детальніше</div>
             </div>
         </div>
 

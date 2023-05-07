@@ -46,7 +46,7 @@ public class WebSecurityConfig {
                 )
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/", true)
+                .defaultSuccessUrl("/UserPage", true)
                 .and()
                 .logout()
                 .clearAuthentication(true)

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+  <link type="text/css" href="/calendar.css" th:href="@{calendar.css}" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<main>
+  <div class="calendar-container">
+    <h1>Календар з вибором години</h1>
+    <table>
+      <thead>
+      <tr>
+        <th>Понеділок</th>
+        <th>Вівторок</th>
+        <th>Середа</th>
+        <th>Четвер</th>
+        <th>П'ятниця</th>
+        <th>Субота</th>
+        <th>Неділя</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="week,weekIndex : ${calendar}">
+        <td th:each="day,dayIndex : ${week}">
+          <div class="calendar-day">
+            <div class="calendar-date">
+              <span th:text="${day.dayOfMonth()}"></span>
+              <span th:text="${day.month().name()}"></span>
+              <span th:text="${day.year()}"></span>
+            </div>
+            <div class="calendar-times">
+              <form th:action="@{/book}" method="post">
+                <input type="hidden" name="date" th:value="${day}">
+                <select name="time">
+                  <option value="10:00 - 11:00">10:00 - 11:00</option>
+                  <option value="11:00 - 12:00">11:00 - 12:00</option>
+                </select>
+                <button type="submit">Забронювати</button>
+              </form>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+</body>
+</html>

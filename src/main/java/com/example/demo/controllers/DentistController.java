@@ -48,11 +48,8 @@ public class DentistController {
     }
 
     @GetMapping("/DentistPage/delete/{id}")
-    public String deleteDentist(@PathVariable String id){
-        Optional<Journal> byId = journalRepo.findById(Long.valueOf(id));
-        if(byId.isPresent()){
-            journalRepo.delete(byId.get());
-        }
+    public String deleteRecord(@PathVariable String id){
+        journalRepo.deleteById(Long.valueOf(id));
         return "redirect:/DentistPage";
     }
 }

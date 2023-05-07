@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface JournalRepository extends CrudRepository<Journal, Long> {
 
-    @Query("SELECT j FROM Journal j WHERE j.patient.id = ?1 and date >= ?2")
+    @Query("SELECT j FROM Journal j WHERE j.dentist.id = ?1 and date >= ?2")
     List<Journal> findPatientRecords(long patientId, Date date);
 
 }

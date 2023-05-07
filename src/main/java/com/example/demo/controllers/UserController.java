@@ -1,17 +1,21 @@
 package com.example.demo.controllers;
 
+import com.example.demo.dto.UserDto;
 import com.example.demo.entity.Journal;
 import com.example.demo.entity.Patient;
+import com.example.demo.entity.User;
 import com.example.demo.repo.JournalRepository;
 import com.example.demo.repo.PatientRepository;
+import com.example.demo.repo.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.Authentication;;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.Principal;
 import java.util.Calendar;
@@ -27,7 +31,10 @@ public class UserController {
     JournalRepository journalRepo;
     @Autowired
     PatientRepository patientRepo;
-
+    @Autowired
+    UserRepository userRepo;
+    @Autowired
+    public PasswordEncoder passEncoder;
 
     @GetMapping("/registration")
     public String registration(){
@@ -38,7 +45,7 @@ public class UserController {
     public String userPage(Principal principal, Model model) {
 
         Authentication authentication = (Authentication) principal;
-        User user = (User) authentication.getPrincipal();
+        org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) authentication.getPrincipal();
         final String username = user.getUsername();
         Patient patient = patientRepo.getPatientByUsername(username);
         final Calendar calendar = Calendar.getInstance();
@@ -61,4 +68,34 @@ public class UserController {
         }
         return "redirect:/UserPage";
     }
+
+    @GetMapping("/UserPage/edit/{id}")
+    public String editDentist(@PathVariable String id){
+        Optional<Journal> byId = journalRepo.findById(Long.valueOf(id));
+        if(byId.isPresent()){
+            journalRepo.delete(byId.get());
+        }
+        return "/RecordDentist";
+    }
+
+    @PostMapping("/SignUp")
+    public String SignUp(UserDto userDto){
+
+
+        User user = new User();
+        user.setName(userDto.getEmail());
+        user.setPassword(passEncoder.encode(userDto.getPassword()));
+//        user.setRoles(Arrays.asList("ROLE_USER"));
+        user.setActive(true);
+
+        userRepo.save(user);
+
+
+
+
+
+return "";
+
+    }
+
 }

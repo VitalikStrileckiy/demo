@@ -21,4 +21,9 @@ public class MainController {
     public String signUp(Model model){
         return "SignUp";
     }
+
+    @GetMapping("/dentist")
+    public String dentist(Model model){
+        return "dentist";
+    }
 }
