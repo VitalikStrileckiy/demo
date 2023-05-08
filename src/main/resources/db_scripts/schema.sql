@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS `dentist`;
-CREATE DATABASE `dentist` CHARACTER SET utf8mb3;
+CREATE DATABASE `dentist` CHARACTER SET utf8mb4;
 USE `dentist`;
 
 --
@@ -11,7 +11,7 @@ CREATE TABLE `users` (
   `password` varchar(100) NOT NULL,
   `enabled` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Table structure for table `authorities`
@@ -22,7 +22,7 @@ CREATE TABLE `authorities` (
   `authority` varchar(50) NOT NULL,
   UNIQUE KEY `ix_auth_username` (`username`,`authority`),
   CONSTRAINT `authorities_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Table structure for table `dentist`
@@ -35,7 +35,7 @@ CREATE TABLE `dentist` (
   `active` bit(1) NOT NULL,
   `username` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Table structure for table `service`
@@ -46,7 +46,7 @@ CREATE TABLE `service` (
   `active` bit(1) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Table structure for table `patient`
@@ -58,7 +58,7 @@ CREATE TABLE `patient` (
   `phone` varchar(255) DEFAULT NULL,
   `username` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Table structure for table `journal`
@@ -77,7 +77,16 @@ CREATE TABLE `journal` (
   CONSTRAINT `dentist` FOREIGN KEY (`dentist_id`) REFERENCES `dentist` (`id`),
   CONSTRAINT `service` FOREIGN KEY (`service_id`) REFERENCES `service` (`id`),
   CONSTRAINT `patient` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS `dentistCalendar`;
+CREATE TABLE `dentistCalendar` (
+  `id` bigint NOT NULL,
+  `date` datetime(6) NOT NULL,
+  `dentist_id` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `dentist` FOREIGN KEY (`dentist_id`) REFERENCES `dentist` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ----
 ---- Table structure for table `dentist_seq`
@@ -85,7 +94,7 @@ CREATE TABLE `journal` (
 --DROP TABLE IF EXISTS `dentist_seq`;
 --CREATE TABLE `dentist_seq` (
 --  `next_val` bigint DEFAULT NULL
---) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+--) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 ----
 ---- Table structure for table `journal_seq`
@@ -93,12 +102,12 @@ CREATE TABLE `journal` (
 --DROP TABLE IF EXISTS `journal_seq`;
 --CREATE TABLE `journal_seq` (
 --  `next_val` bigint DEFAULT NULL
---) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+--) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 --DROP TABLE IF EXISTS `patient_seq`;
 --CREATE TABLE `patient_seq` (
 --  `next_val` bigint DEFAULT NULL
---) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+--) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 ----
 ---- Table structure for table `service_seq`
@@ -106,4 +115,4 @@ CREATE TABLE `journal` (
 --DROP TABLE IF EXISTS `service_seq`;
 --CREATE TABLE `service_seq` (
 --  `next_val` bigint DEFAULT NULL
---) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+--) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
