@@ -73,8 +73,8 @@ INSERT INTO `users` VALUES
 UNLOCK TABLES;
 
 
-LOCK TABLES `dentistCalendar` WRITE;
-INSERT INTO `dentistCalendar` VALUES
+LOCK TABLES `dentist_calendar` WRITE;
+INSERT INTO `dentist_calendar` VALUES
 (1,'2023-06-01 10:00:00.000000',1),
 (2,'2023-06-01 11:00:00.000000',1),
 (3,'2023-06-01 12:00:00.000000',1),

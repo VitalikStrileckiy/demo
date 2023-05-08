@@ -81,7 +81,7 @@ CREATE TABLE `journal` (
   CONSTRAINT `patient` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-DROP TABLE IF EXISTS `dentistCalendar`;
+DROP TABLE IF EXISTS `dentist_calendar`;
 CREATE TABLE `dentistCalendar` (
   `id` bigint NOT NULL,
   `date` datetime(6) NOT NULL,
