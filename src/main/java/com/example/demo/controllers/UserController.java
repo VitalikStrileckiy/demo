@@ -8,6 +8,7 @@ import com.example.demo.repo.JournalRepository;
 import com.example.demo.repo.PatientRepository;
 import com.example.demo.repo.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;;
 import org.springframework.security.crypto.password.PasswordEncoder;

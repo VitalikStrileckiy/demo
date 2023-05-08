@@ -17,14 +17,12 @@
     <div class="header_inner">
       <div class="logo"><a href="/" class="logo-img">
         <img class="img" src="../img/logotype.jpg" width="60" height="60"></a></div>
-      <div sec:authorize="isAuthenticated()">
-        Authenticated username:
-        <div sec:authentication="name"></div>
-      </div>
       <nav class="nav">
         <a class="nav_link" href="/">На головну</a>
-        <a sec:authorize="isAuthenticated()" class="nav_link" href=/logout>Вихід</a>
+        <a sec:authorize="isAuthenticated()" class="nav_link" href=/logout>вийти з аккаунта</a>
+        <div class="name"  sec:authentication="name"></div>
       </nav>
+    </div>
     </div>
   </div>
 </header>

@@ -8,6 +8,29 @@
 </head>
 <body>
 
+
+
+
+<div class="register-form-container2 select-offer-container">
+  <div class="container-services" th:each="calendar : ${dentistCalendars}">
+    <label class="label-services" th:text="${calendars.date}"></label>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <main>
   <div class="calendar-container">
     <h1>Календар з вибором години</h1>
@@ -49,6 +72,8 @@
     </table>
   </div>
 </main>
+
+
 
 </body>
 </html>

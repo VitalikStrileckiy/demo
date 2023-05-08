@@ -2,6 +2,8 @@ DROP DATABASE IF EXISTS `dentist`;
 CREATE DATABASE `dentist` CHARACTER SET utf8mb4;
 USE `dentist`;
 
+
+
 --
 -- Table structure for table `users`
 --

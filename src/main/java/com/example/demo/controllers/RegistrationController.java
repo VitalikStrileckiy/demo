@@ -7,6 +7,7 @@ import com.example.demo.entity.User;
 import com.example.demo.repo.AuthorityRepository;
 import com.example.demo.repo.PatientRepository;
 import com.example.demo.repo.UserRepository;
+import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -34,6 +35,12 @@ public class RegistrationController {
     @PostMapping ("/SignUp")
     public String registration(Model model, UserDto userDto){
 
+        EmailValidator emailValidator = EmailValidator.getInstance();
+
+        if (!emailValidator.isValid(userDto.getEmail())){
+
+            return "redirect:/SiqnUp";
+        }
 
         User user = new User();
         user.setName(userDto.getEmail());
@@ -52,6 +59,6 @@ public class RegistrationController {
         authority.setAuthority("ROLE_CLIENT");
         authorityRepo.save(authority);
 
-        return "/Main";
+        return "login";
     }
 }

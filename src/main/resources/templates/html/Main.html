@@ -26,7 +26,9 @@
                 <div class="" sec:authorize="hasRole('ROLE_CLIENT')">
                     <a class="nav_link" href="UserPage">Мої записи</a>
                 </div>
-<!--                <a sec:authorize="isAuthenticated()" class="nav_link" href=/UserPage>Мої записи</a>-->
+                <div class="nav_link"  sec:authentication="name"></div>
+
+                <!--                <a sec:authorize="isAuthenticated()" class="nav_link" href=/UserPage>Мої записи</a>-->
                 <a sec:authorize="isAuthenticated()" class="nav_link" href=/logout>Вихід</a>
                 <a sec:authorize="!isAuthenticated()" class="nav_link" href=/login>Вхід</a>
             </nav>
@@ -262,26 +264,26 @@
             </div>
         </div>
 
-<!--        <div class="about2">-->
-<!--            <div class="about2_item">-->
-<!--                <div class="about2_img">-->
-<!--                    <img class="img" src="/img/team4.jpg">-->
-<!--                </div>-->
-<!--                <div class="about2_text">МАРІЯ</div>-->
-<!--            </div>-->
-<!--            <div class="about2_item">-->
-<!--                <div class="about2_img">-->
-<!--                    <img class="img" src="/img/team5.jpg">-->
-<!--                </div>-->
-<!--                <div class="about2_text">ІРИНА</div>-->
-<!--            </div>-->
-<!--            <div class="about2_item">-->
-<!--                <div class="about2_img">-->
-<!--                    <img class="img" src="/img/team6.jpg">-->
-<!--                </div>-->
-<!--                <div class="about2_text">ЮЛІЯ</div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="about2">-->
+        <!--            <div class="about2_item">-->
+        <!--                <div class="about2_img">-->
+        <!--                    <img class="img" src="/img/team4.jpg">-->
+        <!--                </div>-->
+        <!--                <div class="about2_text">МАРІЯ</div>-->
+        <!--            </div>-->
+        <!--            <div class="about2_item">-->
+        <!--                <div class="about2_img">-->
+        <!--                    <img class="img" src="/img/team5.jpg">-->
+        <!--                </div>-->
+        <!--                <div class="about2_text">ІРИНА</div>-->
+        <!--            </div>-->
+        <!--            <div class="about2_item">-->
+        <!--                <div class="about2_img">-->
+        <!--                    <img class="img" src="/img/team6.jpg">-->
+        <!--                </div>-->
+        <!--                <div class="about2_text">ЮЛІЯ</div>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
     </div>
 </div>
@@ -296,13 +298,9 @@
 </div>
 
 
-<main class="main">
-    <div class="container">
-        <div id="map">
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20983.653103885033!2d24.8451984651123!3d48.89716354582231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c329402d993b%3A0xbbbbbb5a31cc5839!2z0J3QvtCy0LAg0L_QvtGI0YLQsCDihJYx!5e0!3m2!1suk!2sua!4v1676925993890!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
-</main>
+<div id="map">
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20983.653103885033!2d24.8451984651123!3d48.89716354582231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c329402d993b%3A0xbbbbbb5a31cc5839!2z0J3QvtCy0LAg0L_QvtGI0YLQsCDihJYx!5e0!3m2!1suk!2sua!4v1676925993890!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
 
 <footer class="footer">

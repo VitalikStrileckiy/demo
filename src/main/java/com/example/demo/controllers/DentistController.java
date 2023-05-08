@@ -40,7 +40,7 @@ public class DentistController {
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
-        final List<Journal> patientRecords = journalRepo.findPatientRecords(dentist.getId(), calendar.getTime());
+        final List<Journal> patientRecords = journalRepo.findDentistRecords(dentist.getId(), calendar.getTime());
 
         model.addAttribute("patientRecords", patientRecords);
 

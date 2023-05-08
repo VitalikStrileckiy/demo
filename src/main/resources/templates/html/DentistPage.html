@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,9 @@
             <div class="logo"><a href="/" class="logo-img">
                 <img class="img" src="../img/logotype.jpg" width="60" height="60"></a></div>
             <nav class="nav">
-                <a class="nav_link" href="Main.html">Вийти</a>
+                <a class="nav_link" href="/">На головну</a>
+                <a sec:authorize="isAuthenticated()" class="nav_link" href=/logout>вийти з аккаунта</a>
+                <div class="name"  sec:authentication="name"></div>
             </nav>
         </div>
     </div>
